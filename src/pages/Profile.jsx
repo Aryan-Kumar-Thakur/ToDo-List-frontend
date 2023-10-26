@@ -5,6 +5,9 @@ import Loader from '../components/Loader'
 const Profile = () => {
     const {User,isAuthenticated,loading} = useContext(Context)
     console.log(User)
+
+  if(!isAuthenticated) return <Navigate to={"/login"}/>
+  
   return (
     <>
     {
