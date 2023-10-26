@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import { Context } from '../main'
 import Loader from '../components/Loader'
+import { Navigate } from 'react-router-dom'
 
 const Profile = () => {
     const {User,isAuthenticated,loading} = useContext(Context)
-    console.log(User)
 
   if(!isAuthenticated) return <Navigate to={"/login"}/>
-  
+
   return (
     <>
     {
